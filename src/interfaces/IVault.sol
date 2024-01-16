@@ -119,7 +119,7 @@ interface IVault {
     function getPoolTokens(bytes32 poolId)
         external
         view
-        returns (address tokens, uint256[] memory balances, uint256 lastChangeBlock);
+        returns (address[] memory tokens, uint256[] memory balances, uint256 lastChangeBlock);
     function getProtocolFeesCollector() external view returns (address);
     function hasApprovedRelayer(address user, address relayer) external view returns (bool);
     function joinPool(bytes32 poolId, address sender, address recipient, JoinPoolRequest memory request)
