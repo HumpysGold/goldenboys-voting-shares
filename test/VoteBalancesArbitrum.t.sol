@@ -32,7 +32,7 @@ contract VoteBalancesArbitrum is Test {
 
     function test_balancerGoldWstethUsdcBalanceOf() public {
         // https://arbiscan.io/tokencheck-tool?t=0xcF853F14EF6111435Cb39c0C43C66366cc6300F1&a=0x1E7267fA2628d66538822Fc44f0EDb62b07272A4 (input block 170000000)
-        // holds 10e18
+        // holds 3000e18
         address holder = 0x1E7267fA2628d66538822Fc44f0EDb62b07272A4;
         uint256 numVotes = votes.balancerGoldWstethUsdcBalanceOf(holder);
 
@@ -45,7 +45,7 @@ contract VoteBalancesArbitrum is Test {
 
     function test_balancerGoldWstethBalAuraBalanceOf() public {
         // https://arbiscan.io/tokencheck-tool?t=0x159be31493C26F8F924b3A2a7F428C2f41247e83&a=0x1E7267fA2628d66538822Fc44f0EDb62b07272A4 (input block 170000000)
-        // holds 10e18
+        // holds 400e18
         address holder = 0x1E7267fA2628d66538822Fc44f0EDb62b07272A4;
         uint256 numVotes = votes.balancerGoldWstethBalAuraBalanceOf(holder);
 
