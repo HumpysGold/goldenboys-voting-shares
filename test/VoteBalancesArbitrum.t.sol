@@ -7,7 +7,7 @@ import {GoldenBoysVotes} from "../src/arbitrum/GoldenBoysVotes.sol";
 import {IWeightedPool} from "../src/interfaces/IWeightedPool.sol";
 import {IVault} from "../src/interfaces/IVault.sol";
 
-contract VoteBalancesBase is Test {
+contract VoteBalancesArbitrum is Test {
     GoldenBoysVotes votes;
 
     uint256 constant BLOCK = 170000000;
