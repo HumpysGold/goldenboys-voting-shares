@@ -3,16 +3,11 @@ pragma solidity ^0.8.23;
 import "forge-std/Test.sol";
 import "forge-std/interfaces/IERC20.sol";
 
-import {GoldenBoysVotes} from "../src/GoldenBoysVotes.sol";
+import {GoldenBoysVotes} from "../src/base/GoldenBoysVotes.sol";
 import {IWeightedPool} from "../src/interfaces/IWeightedPool.sol";
 import {IVault} from "../src/interfaces/IVault.sol";
 
-
-contract VoteBalances is Test {
-    uint256 mainnetFork;
-    uint256 baseFork;
-    uint256 arbitrumFork;
-
+contract VoteBalancesBase is Test {
     GoldenBoysVotes votes;
 
     uint256 constant BLOCK = 9230000;
@@ -25,10 +20,7 @@ contract VoteBalances is Test {
     IWeightedPool constant bptGoldBalUsdc = IWeightedPool(0xb328B50F1f7d97EE8ea391Ab5096DD7657555F49);
 
     function setUp() public {
-        baseFork = vm.createSelectFork("base", BLOCK);
-        // arbitrumFork = vm.createFork("arbitrum");
-
-        vm.selectFork(baseFork);
+        vm.createSelectFork("base", BLOCK);
         votes = new GoldenBoysVotes();
     }
 
